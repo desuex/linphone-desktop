@@ -3669,8 +3669,9 @@ void linphone_core_notify_incoming_call(LinphoneCore *lc, LinphoneCall *call){
 		linphone_ringtoneplayer_start(lc->factory, lc->ringtoneplayer, ringcard, lc->sound_conf.local_ring, 2000);
 	}else{
 		/* else play a tone within the context of the current call */
-		call->ringing_beep=TRUE;
-		linphone_core_play_named_tone(lc,LinphoneToneCallWaiting);
+		//PLEASE DON'T SAY YOU ARE LAZY
+		//call->ringing_beep=TRUE;
+		//linphone_core_play_named_tone(lc,LinphoneToneCallWaiting);
 	}
 
 	linphone_call_set_state(call,LinphoneCallIncomingReceived,"Incoming call");
